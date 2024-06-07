@@ -1,4 +1,4 @@
-import { signOut } from '../utils/auth';
+import { signOut } from '../../utils/auth';
 // GOOGLE LOGIN BUTTON
 const logoutButton = () => {
   const domString = '<button id="google-auth" class="btn btn-danger">SIGNOUT</button>';
