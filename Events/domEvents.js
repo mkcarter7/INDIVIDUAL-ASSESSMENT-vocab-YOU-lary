@@ -1,3 +1,6 @@
+import getWords from '../api/word';
+import { showWords } from '../pages/words';
+
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     //  CLICK EVENT FOR DELETING A WORD
