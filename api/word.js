@@ -33,19 +33,19 @@ export default getWords;
 //     .then((data) => resolve(data))
 //     .catch(reject);
 // });
-// // CREATE WORD
-// const createWord = (payload) => new Promise((resolve, reject) => {
-//   fetch(`${endpoint}/word.json`, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(payload)
-//   })
-//     .then((response) => response.json())
-//     .then((data) => resolve(data))
-//     .catch(reject);
-// });
+// CREATE WORD
+const createWord = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload)
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
 
 // // UPDATE WORD
 // const updateWord = (payload) => new Promise((resolve, reject) => {
@@ -62,7 +62,7 @@ export default getWords;
 // });
 export {
   getWords,
-//   createWord,
+  createWord,
 //   deleteWord,
 //   updateWord
 };
