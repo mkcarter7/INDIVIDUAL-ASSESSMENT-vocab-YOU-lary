@@ -1,5 +1,5 @@
-// import { showWords } from '../pages/words';
-// import getWords from '../api/word';
+import { showWords } from '../pages/words';
+import getWords from '../api/word';
 import signOut from '../utils/auth';
 // navigation events
 const navigationEvents = () => {
@@ -7,9 +7,9 @@ const navigationEvents = () => {
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
-  // // ALL WORDS
-  // document.querySelector('#all-words').addEventListener('click', () => {
-  //   getWords().then(showWords);
-  // });
+  // ALL WORDS
+  document.querySelector('#all-words').addEventListener('click', () => {
+    getWords().then(showWords);
+  });
 };
 export default navigationEvents;
