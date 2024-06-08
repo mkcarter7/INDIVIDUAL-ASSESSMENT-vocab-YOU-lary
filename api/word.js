@@ -60,9 +60,9 @@ export default getWords;
 //     .then((data) => resolve(data))
 //     .catch(reject);
 // });
-// export {
-//   getWords,
+export {
+  getWords,
 //   createWord,
 //   deleteWord,
 //   updateWord
-// };
+};
