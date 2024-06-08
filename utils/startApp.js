@@ -1,8 +1,8 @@
 import getWords from '../api/word';
 import logoutButton from '../components/Buttons/logoutButton';
 import domBuilder from
-import navBar from '../components/shared/navBar';
-import domEvents from '../events/domEvents';
+import navBar from '../components/Shared/navBar';
+import domEvents from '../Events/domEvents';
 import formEvents from '../events/formEvents';
 import navigationEvents from '../events/navigationEvents';
 import { showWords } from '../pages/word';
