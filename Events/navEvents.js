@@ -1,5 +1,5 @@
 import { showWords } from '../pages/words';
-import getWords from '../api/word';
+import { getWords } from '../api/word';
 import signOut from '../utils/auth';
 // navigation events
 const navigationEvents = () => {
