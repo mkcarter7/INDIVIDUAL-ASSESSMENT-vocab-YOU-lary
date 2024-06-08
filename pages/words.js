@@ -3,17 +3,14 @@ import renderToDOM from '../utils/renderToDom';
 
 const emptyWords = () => {
   const domString = '<h1>No Words</h1>';
-  // eslint-disable-next-line no-undef
   renderToDOM('#store', domString);
 };
 
 const showWords = (array) => {
-  // eslint-disable-next-line no-undef
   clearDom();
 
   const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-author-btn">Add An Author</button>';
 
-  // eslint-disable-next-line no-undef
   renderToDOM('#add-button', btnString);
 
   let domString = '';
@@ -31,7 +28,6 @@ const showWords = (array) => {
     </div>
     `;
   });
-  // eslint-disable-next-line no-undef
   renderToDOM('#store', domString);
 };
 
