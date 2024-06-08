@@ -1,3 +1,6 @@
+import clearDom from '../utils/clearDom';
+import renderToDOM from '../utils/renderToDom';
+
 const emptyWords = () => {
   const domString = '<h1>No Words</h1>';
   // eslint-disable-next-line no-undef
