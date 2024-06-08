@@ -41,9 +41,9 @@ const domEvents = () => {
     // }
 
     //  CLICK EVENT FOR SHOWING FORM FOR ADDING AN WORDS
-    if (e.target.id.includes('add-words-btn')) {
-      console.warn('ADD WORD');
-    }
+  //   if (e.target.id.includes('add-words-btn')) {
+  //     console.warn('ADD WORD');
+  //   }
   });
   // ADD CLICK EVENT FOR EDITING WORDS
   //   if (e.target.id.includes('delete-words-btn')) {
