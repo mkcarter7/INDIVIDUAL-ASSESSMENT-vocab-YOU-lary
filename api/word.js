@@ -47,7 +47,7 @@ export default getWords;
 //     .catch(reject);
 // });
 
-// // TODO: UPDATE WORD
+// // UPDATE WORD
 // const updateWord = (payload) => new Promise((resolve, reject) => {
 //   fetch(`${endpoint}/books/${payload.firebaseKey}.json`, {
 //     method: 'POST',
