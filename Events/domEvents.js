@@ -4,7 +4,7 @@ import { showWords } from '../pages/words';
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-card-btn')) {
-           if (window.confirm('Want to delete?')) {
+      if (window.confirm('Want to delete?')) {
         console.warn('CLICKED DELETE CARD', e.target.id);
         const [, firebaseKey] = e.target.id.split('--');
 
@@ -22,8 +22,8 @@ const domEvents = () => {
     if (e.target.id.includes('edit-card-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      getSingleCard(firebaseKey).then((bookObj) => addVocabCard(bookObj));
-      console.warn('EDIT CARD', e.target.id);
+      getSingleCard(firebaseKey).then((bookObj) => addWord(bookObj));
+      console.warn('EDIT WORD', e.target.id);
     }
   });
 };
