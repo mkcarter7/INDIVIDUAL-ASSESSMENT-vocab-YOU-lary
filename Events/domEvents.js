@@ -5,7 +5,7 @@ const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-card-btn')) {
       if (window.confirm('Want to delete?')) {
-        console.warn('CLICKED DELETE CARD', e.target.id);
+        // console.warn('CLICKED DELETE CARD', e.target.id);
         const [, firebaseKey] = e.target.id.split('--');
 
         deleteWord(firebaseKey).then(() => {
