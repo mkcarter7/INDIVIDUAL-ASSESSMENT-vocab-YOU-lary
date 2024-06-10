@@ -3,7 +3,7 @@ import logoutButton from '../components/Buttons/logoutButton';
 import domBuilder from '../components/Shared/domBuilder';
 import navBar from '../components/Shared/navBar';
 import domEvents from '../Events/domEvents';
-import formEvents from '../events/formEvents';
+import formEvents from '../Events/formEvents';
 import navigationEvents from '../Events/navEvents';
 // import { showWords } from '../pages/word';
 

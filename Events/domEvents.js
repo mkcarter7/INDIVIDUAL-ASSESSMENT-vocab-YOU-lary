@@ -1,6 +1,5 @@
 import { getWords, deleteWord, createWord, getSingleWord } from '../api/word';
 import { showWords } from '../pages/words';
-import createWord from '../components/Form/form';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
