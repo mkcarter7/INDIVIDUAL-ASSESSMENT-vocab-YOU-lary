@@ -75,6 +75,6 @@ export {
   getWords,
   createWord,
   deleteWord,
-  updateWord
+  updateWord,
   getSingleWord
 };
