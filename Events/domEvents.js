@@ -1,11 +1,12 @@
-import { getWords, deleteWord } from '../api/word';
+import { getWords, deleteWord, createWord, getSingleWord } from '../api/word';
 import { showWords } from '../pages/words';
+import createWord from '../components/Form/form';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-card-btn')) {
       if (window.confirm('Want to delete?')) {
-        // console.warn('CLICKED DELETE CARD', e.target.id);
+        console.warn('CLICKED DELETE CARD', e.target.id);
         const [, firebaseKey] = e.target.id.split('--');
 
         deleteWord(firebaseKey).then(() => {
@@ -15,14 +16,14 @@ const domEvents = () => {
     }
 
     if (e.target.id.includes('add-card-btn')) {
-      addWord();
+      createWord();
       console.warn('ADD CARD');
     }
 
     if (e.target.id.includes('edit-card-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 
-      getSingleCard(firebaseKey).then((bookObj) => addWord(bookObj));
+      getSingleWord(firebaseKey).then((bookObj) => createWord(bookObj));
       console.warn('EDIT WORD', e.target.id);
     }
   });
