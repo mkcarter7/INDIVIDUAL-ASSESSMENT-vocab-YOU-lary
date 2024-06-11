@@ -1,11 +1,11 @@
-// import getWords from '../api/word';
+// import { getWords } from '../api/word';
 import logoutButton from '../components/Buttons/logoutButton';
 import domBuilder from '../components/Shared/domBuilder';
 import navBar from '../components/Shared/navBar';
 import domEvents from '../Events/domEvents';
 import formEvents from '../Events/formEvents';
 import navigationEvents from '../Events/navEvents';
-// import { showWords } from '../pages/word';
+// import { showWords } from '../pages/words';
 
 const startApp = () => {
   domBuilder(); // BUILD THE DOM
