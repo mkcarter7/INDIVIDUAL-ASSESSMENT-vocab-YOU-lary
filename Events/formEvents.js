@@ -1,37 +1,44 @@
-import { createWord, getWords, updateWord } from '../api/word';
 import { showWords } from '../pages/words';
+import {
+  createWord, getWords, updateWord, getSingleWord
+} from '../api/word';
 
 const formEvents = (user) => {
-  console.warn(user);
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.target.id.includes('submit-card')) {
+    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A VOCAB CARD
+    if (e.target.id.includes('submit-word')) {
       const payload = {
+        definition: document.querySelector('#definition').value,
+        language_id: document.querySelector('#language_id').value,
+        time_submitted: Date.now(),
         title: document.querySelector('#word').value,
-        description: document.querySelector('#definition').value,
-        category: document.querySelector('#category').value,
+        uid: user.uid
       };
-
-      createWord(payload, user.uid).then(({ name }) => {
-        const patchPayload = { firebaseKey: name };
-
-        updateWord(patchPayload).then(() => {
-          getWords(user.uid).then(showWords);
+      // this patches the payload object with a firebaseKey and a language
+      createWord(payload).then(({ name }) => {
+        getSingleWord(payload.language_id).then((language) => {
+          const patchPayload = { firebaseKey: name, language: language.name };
+          updateWord(patchPayload).then(() => {
+            getWords(user).then(showWords);
+          });
         });
       });
-      console.warn('CLICKED SUBMIT WORD', e.target.id);
     }
+
+    // CLICK EVENT FOR EDITING WORDS
     if (e.target.id.includes('update-word')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
-        title: document.querySelector('#title').value,
-        description: document.querySelector('#definition').value,
-        category: document.querySelector('#category').value,
+        definition: document.querySelector('#definition').value,
+        language_id: document.querySelector('#language_id').value,
+        time_submitted: Date.now(),
+        title: document.querySelector('#word').value,
         firebaseKey,
       };
 
       updateWord(payload).then(() => {
-        getWords().then(showWords);
+        getWords(user.uid).then((vocab) => showWords(vocab));
       });
     }
   });
