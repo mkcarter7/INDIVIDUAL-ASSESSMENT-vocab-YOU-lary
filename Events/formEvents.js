@@ -6,7 +6,7 @@ import {
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A VOCAB CARD
+    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A WORD
     if (e.target.id.includes('submit-word')) {
       const payload = {
         definition: document.querySelector('#definition').value,

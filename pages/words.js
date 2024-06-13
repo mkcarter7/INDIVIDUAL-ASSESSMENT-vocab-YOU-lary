@@ -3,13 +3,13 @@ import renderToDOM from '../utils/renderToDom';
 
 const emptyWords = () => {
   const domString = '<h1>No Words</h1>';
-  renderToDOM('#store', domString);
+  renderToDOM('#cards', domString);
 };
 
 const showWords = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-word-btn">Add A Word</button>';
+  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-word-btn"></button>';
 
   renderToDOM('#add-button', btnString);
 
@@ -28,7 +28,7 @@ const showWords = (array) => {
     </div>
     `;
   });
-  renderToDOM('#store', domString);
+  renderToDOM('#cards', domString);
 };
 
 export { showWords, emptyWords };

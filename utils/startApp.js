@@ -8,7 +8,7 @@ import navigationEvents from '../Events/navEvents';
 import { showWords } from '../pages/words';
 
 const startApp = (user) => {
-  domBuilder(); // BUILD THE DOM
+  domBuilder(user); // BUILD THE DOM
   domEvents(user); // ADD THE EVENT LISTENTERS TO THE DOM
   formEvents(user); // ADD FORM EVENT LISTENTERS TO THE DOM
   navBar(); // DYNAMICALLY ADD THE NAV
@@ -16,7 +16,7 @@ const startApp = (user) => {
   navigationEvents(user); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
 
   // Put all words on the DOM on App load
-  getWords().then((words) => showWords(words));
+  getWords(user.uid).then((words) => showWords(words));
 };
 
 export default startApp;
