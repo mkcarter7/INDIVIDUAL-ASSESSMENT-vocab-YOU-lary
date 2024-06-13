@@ -18,7 +18,6 @@ const navBar = () => {
             <li class="nav-item">
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="words">Words</a>
             </li>
             <li>
             <input

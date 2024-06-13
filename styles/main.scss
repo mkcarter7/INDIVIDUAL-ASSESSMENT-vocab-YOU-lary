@@ -8,3 +8,15 @@ body {
   text-align: center;
   margin-top: 100px;
 }
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+  column-gap: 2%;
+  row-gap: 10px;
+  margin-top: 20px;
+}

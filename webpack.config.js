@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
-const path = require('path');
+// const path = require('path');
 const dotenv = require('dotenv').config({ path: `${__dirname}/.env` });
 
 module.exports = {
