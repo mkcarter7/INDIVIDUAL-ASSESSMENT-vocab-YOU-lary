@@ -9,7 +9,7 @@ const emptyWords = () => {
 const showWords = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-word-btn"></button>';
+  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-word-btn">Add Word</button>';
 
   renderToDOM('#add-button', btnString);
 
@@ -18,8 +18,8 @@ const showWords = (array) => {
     domString += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">${item.first_name} ${item.last_name}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">${item.email}</h6>
+        <h5 class="card-title">${item.title}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${item.definition}</h6>
         <hr>
         <i class="btn btn-success fas fa-eye" id="view-word-btn--${item.firebaseKey}">View</i>
         <i class="fas fa-edit btn btn-info" id="update-word--${item.firebaseKey}">Edit</i>

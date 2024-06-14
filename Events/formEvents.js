@@ -9,11 +9,9 @@ const formEvents = (user) => {
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A WORD
     if (e.target.id.includes('submit-word')) {
       const payload = {
+        title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        language_id: document.querySelector('#language_id').value,
-        time_submitted: Date.now(),
-        title: document.querySelector('#word').value,
-        uid: user.uid
+        language: document.querySelector('language').value,
       };
       // this patches the payload object with a firebaseKey and a language
       createWord(payload).then(({ name }) => {
