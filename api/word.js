@@ -22,7 +22,7 @@ const getWords = () => new Promise((resolve, reject) => {
 });
 // // DELETE WORD
 const deleteWord = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}//${firebaseKey}.json`, {
+  fetch(`${endpoint}/vocabulary/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const createWord = (payload) => new Promise((resolve, reject) => {
 // UPDATE WORD
 const updateWord = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary/${payload.firebaseKey}.json`, {
-    method: 'POST',
+    method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -76,5 +76,5 @@ export {
   createWord,
   deleteWord,
   updateWord,
-  getSingleWord
+  getSingleWord,
 };

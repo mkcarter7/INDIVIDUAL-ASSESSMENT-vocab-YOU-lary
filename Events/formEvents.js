@@ -12,11 +12,11 @@ const formEvents = (user) => {
         language: document.querySelector('#language').value,
       };
       // this patches the payload object with a firebaseKey and a language
-      createWord(payload).then(({ name }) => {
+      createWord(payload, user.uid).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
-          getWords(user).then((showWords));
+          getWords(user.uid).then((showWords));
         });
       });
     }
@@ -27,12 +27,11 @@ const formEvents = (user) => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        language_id: document.querySelector('#language_id').value,
-        time_submitted: Date.now(),
+        language: document.querySelector('#language').value,
       };
 
       updateWord(payload, firebaseKey).then(() => {
-        getWords(user).then((word) => showWords(word));
+        getWords(user).then(showWords);
       });
     }
   });

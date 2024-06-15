@@ -11,7 +11,7 @@ const addWord = (obj = {}) => {
         <input type="text" class="form-control" id="title" aria-describedby="word" placeholder="Enter Word" value="${obj.title || ''}" required>
       </div>
       <div class="form-group">
-        <label for="description">Definition</label>
+        <label for="definition">Definition</label>
         <textarea class="form-control" placeholder="Definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
       </div>
       <div class="form-group">

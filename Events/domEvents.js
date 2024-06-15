@@ -19,7 +19,7 @@ const domEvents = (user) => {
       addWord();
     }
     // CLICK EVENT FOR EDITING/UPDATING A WORD
-    if (e.target.id.includes('edit-word')) {
+    if (e.target.id.includes('edit-word-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleWord(firebaseKey).then((wordObject) => addWord(wordObject));
     }
