@@ -11,14 +11,18 @@ const navigationEvents = (user) => {
 
   // ALL WORDS
   document.querySelector('#all-words').addEventListener('click', () => {
-    getWords(user).then(showWords);
+    getWords().then(showWords);
   });
-  document.querySelector('#addWord').addEventListener('click', () => {
-    addWord(user);
+  document.querySelector('#add-word-btn').addEventListener('click', () => {
+    addWord(user.uid);
+  });
+  document.querySelector('#edit-word-btn').addEventListener('click', () => {
+    addWord(user.uid);
   });
 
   document.querySelector('#createbutton').addEventListener('click', () => {
     createWord(user);
   });
 };
+
 export default navigationEvents;
