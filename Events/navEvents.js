@@ -13,7 +13,7 @@ const navigationEvents = (user) => {
   document.querySelector('#all-words').addEventListener('click', () => {
     getWords(user).then(showWords);
   });
-  document.querySelector('#addWord').addEventListener('click', () => {
+  document.querySelector('#add-word-btn').addEventListener('click', () => {
     addWord(user);
   });
 

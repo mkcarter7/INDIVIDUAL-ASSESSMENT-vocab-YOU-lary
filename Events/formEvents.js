@@ -16,7 +16,7 @@ const formEvents = (user) => {
         const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
-          getWords(user).then((word) => showWords(word));
+          getWords(user).then((showWords));
         });
       });
     }

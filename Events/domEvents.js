@@ -15,7 +15,7 @@ const domEvents = (user) => {
       }
     }
     // ADD WORD EVENT LISTENER
-    if (e.target.id.includes('add-vocab-btn')) {
+    if (e.target.id.includes('add-word-btn')) {
       addWord();
     }
     // CLICK EVENT FOR EDITING/UPDATING A WORD
