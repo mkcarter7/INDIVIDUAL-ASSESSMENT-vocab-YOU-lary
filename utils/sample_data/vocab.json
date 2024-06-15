@@ -1,51 +1,58 @@
 {
   "id 1":{
-  "title":"Drop Dead Gorgeous","definition":"Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.","language":"Dzongkha",
-  "user_id":""
+  "title":"Drop Dead Gorgeous",
+  "definition":"Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+  "language":"Dzongkha",
+  "user":""
 },
 "id 2":{
-  "title":"Gabby Douglas Story, The","definition":"In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.","language":"Hindi","user_id":"ssreenan1@yahoo.com"},
+  "title":"Gabby Douglas Story, The","definition":"In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+  "language":"Hindi",
+  "user":"ssreenan1@yahoo.com"
+},
   "id 3":{
-  "title":"Harry Potter and the Goblet of Fire","definition":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.","language":"Tswana","user_id":""
+  "title":"Harry Potter and the Goblet of Fire","definition":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.","language":"Tswana",
+  "user":""
 },
 "id 4":{
-  "title":"Flicka","definition":"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+  "title":"Flicka",
+  "definition":"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
   "language":"Hungarian",
-  "user_id":""
+  "user":""
 },
 "id 5":{
   "title":"Great Texas Dynamite Chase, The",
   "definition":"Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.",
   "language":"German",
-  "user_id":""
+  "user":""
 },
 "id 6":{
   "title":"We're No Angels",
   "definition":"Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.",
   "language":"Telugu",
-  "user_id":""
+  "user":""
 },
 "id 7":{
   "title":"Variety Lights",
   "definition":"Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum.",
   "language":"Amharic",
-  "user_id":""
+  "user":""
 },
 "id 8":{
 "title":"Valentine",
 "definition":"Integer a nibh.",
 "language":"Japanese",
-"user_id":""
+"user":""
 },
 "id 9":{
   "title":"Christmas Vacation (National Lampoon's Christmas Vacation)",
   "definition":"Integer a nibh.",
   "language":"Burmese",
-  "user_id":""
+  "user":""
 },
 "id 10":{
   "title":"S. Darko (S. Darko: A Donnie Darko Tale)",
   "definition":"Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
   "language":"Amharic",
-  "user_id":""
+  "user":""
 }}
