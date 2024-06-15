@@ -22,7 +22,7 @@ const getWords = () => new Promise((resolve, reject) => {
 });
 // // DELETE WORD
 const deleteWord = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/word/${firebaseKey}.json`, {
+  fetch(`${endpoint}//${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const createWord = (payload) => new Promise((resolve, reject) => {
 
 // UPDATE WORD
 const updateWord = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/books/${payload.firebaseKey}.json`, {
+  fetch(`${endpoint}/vocabulary/${payload.firebaseKey}.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const updateWord = (payload) => new Promise((resolve, reject) => {
 });
 
 const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/words/${firebaseKey}.json`, {
+  fetch(`${endpoint}/vocabulary/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
