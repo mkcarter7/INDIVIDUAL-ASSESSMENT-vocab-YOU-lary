@@ -16,12 +16,12 @@ const domEvents = (user) => {
     }
     // ADD WORD EVENT LISTENER
     if (e.target.id.includes('add-word-btn')) {
-      addWord();
+      addWord(user.id);
     }
     // CLICK EVENT FOR EDITING/UPDATING A WORD
     if (e.target.id.includes('edit-word-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
-      getSingleWord(firebaseKey).then((wordObject) => addWord(user, wordObject));
+      getSingleWord(firebaseKey).then((wordObject) => addWord(user.id, wordObject));
       getSingleWord(firebaseKey).then(addWord(user));
     }
   });

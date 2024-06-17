@@ -14,14 +14,14 @@ const navigationEvents = (user) => {
     getWords(user.uid).then(showWords);
   });
   document.querySelector('#add-word-btn').addEventListener('click', () => {
-    addWord(user.uid);
+    addWord();
   });
   document.querySelector('#edit-word-btn').addEventListener('click', () => {
-    addWord(user.uid);
+    addWord();
   });
 
   document.querySelector('#createbutton').addEventListener('click', () => {
-    createWord(user.uid);
+    createWord();
   });
 };
 
