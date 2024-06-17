@@ -10,9 +10,10 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#language').value,
+        uid: user.uid,
       };
       // this patches the payload object with a firebaseKey and a language
-      createWord(payload, user.uid).then(({ name }) => {
+      createWord(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {
@@ -31,7 +32,7 @@ const formEvents = (user) => {
       };
 
       updateWord(payload, firebaseKey).then(() => {
-        getWords(user).then(showWords);
+        getWords(user.uid).then(showWords);
       });
     }
   });
