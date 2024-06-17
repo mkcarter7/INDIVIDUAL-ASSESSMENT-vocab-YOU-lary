@@ -1,26 +1,26 @@
 {
-  "-O-RmUKh9CQLCzaCX4ht":{
+  "-0-RmUKh9CQLCzaCX4ht":{
   "title":"Drop Dead Gorgeous",
   "definition":"Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "language":"Dzongkha",
-  "firebase":"-O-RjKFLhARZQ6pR7Fny",
+  "firebaseKey":"-0-RmUKh9CQLCzaCX4ht",
   "uid":""
 },
-"-O-RabDM-9mBImQCisyZ":{
+"-0-RabDM-9mBImQCisyZ":{
   "title":"Gabby Douglas Story, The","definition":"In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
   "language":"Hindi",
-  "firebase":"-O-RabDM-9mBImQCisyZ",
-  "uid":"ssreenan1@yahoo.com"
-},
-  "-O-Qy8HnwZkxVBa1Adph":{
-  "title":"Harry Potter and the Goblet of Fire","definition":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.","language":"Tswana",
-  "firebase":"-O-Qy8HnwZkxVBa1Adph",
+  "firebaseKey":"-RabDM-9mBImQCisyZ",
   "uid":""
 },
-"-O-RjKFLhARZQ6pR7Fny":{
+  "-0-Qy8HnwZkxVBa1Adph":{
+  "title":"Harry Potter and the Goblet of Fire","definition":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.","language":"Tswana",
+  "firebaseKey":"-0-Qy8HnwZkxVBa1Adph",
+  "uid":""
+},
+"-0-RjKFLhARZQ6pR7Fny":{
   "title":"Flicka",
   "definition":"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
   "language":"Hungarian",
-  "firebase":"-O-RjKFLhARZQ6pR7Fny",
+  "firebaseKey":"-0-RjKFLhARZQ6pR7Fny",
   "uid":""
 }}

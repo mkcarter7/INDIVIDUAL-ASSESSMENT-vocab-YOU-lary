@@ -10,7 +10,7 @@ const domEvents = (user) => {
       if (window.confirm('Want to delete?')) {
         const [, firebaseKey] = e.target.id.split('--');
         deleteWord(firebaseKey).then(() => {
-          getWords(user).then((word) => showWords(word));
+          getWords(user.uid).then((word) => showWords(word));
         });
       }
     }
@@ -21,7 +21,8 @@ const domEvents = (user) => {
     // CLICK EVENT FOR EDITING/UPDATING A WORD
     if (e.target.id.includes('edit-word-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
-      getSingleWord(firebaseKey).then((wordObject) => addWord(wordObject));
+      getSingleWord(firebaseKey).then((wordObject) => addWord(user, wordObject));
+      getSingleWord(firebaseKey).then(addWord(user));
     }
   });
 };
