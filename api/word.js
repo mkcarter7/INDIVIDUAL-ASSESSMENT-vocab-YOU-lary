@@ -3,21 +3,27 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 // GET WORD
-const getWords = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabulary.json`, {
+
+const getWords = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-      if (data) {
-        resolve(Object.values(data));
-      } else {
-        resolve([]);
-      }
-    })
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+const filter = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="language"&equalTo=true`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
     .catch(reject);
 });
 // // DELETE WORD
@@ -77,4 +83,5 @@ export {
   deleteWord,
   updateWord,
   getSingleWord,
+  filter,
 };

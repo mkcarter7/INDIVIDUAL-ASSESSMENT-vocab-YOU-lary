@@ -13,7 +13,7 @@ const formEvents = (user) => {
         uid: user.uid,
       };
       // this patches the payload object with a firebaseKey and a language
-      createWord(payload).then(({ name }) => {
+      createWord(payload, user.uid).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateWord(patchPayload).then(() => {

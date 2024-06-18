@@ -1,5 +1,5 @@
 import { showWords } from '../pages/words';
-import { createWord, getWords } from '../api/word';
+import { createWord, getWords, filter } from '../api/word';
 import { signOut } from '../utils/auth';
 import addWord from '../components/Form/form';
 
@@ -14,14 +14,18 @@ const navigationEvents = (user) => {
     getWords(user.uid).then(showWords);
   });
   document.querySelector('#add-word-btn').addEventListener('click', () => {
-    addWord();
+    addWord(user.uid);
   });
   document.querySelector('#edit-word-btn').addEventListener('click', () => {
-    addWord();
+    addWord(user.uid);
   });
 
   document.querySelector('#createbutton').addEventListener('click', () => {
-    createWord();
+    createWord(user.uid);
+  });
+
+  document.querySelector('#Filter').addEventListener('click', () => {
+    filter().then(showWords);
   });
 };
 
