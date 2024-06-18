@@ -1,5 +1,5 @@
 import { showWords } from '../pages/words';
-import { createWord, getWords } from '../api/word';
+import { createWord, getWords, filter } from '../api/word';
 import { signOut } from '../utils/auth';
 import addWord from '../components/Form/form';
 
@@ -22,6 +22,10 @@ const navigationEvents = (user) => {
 
   document.querySelector('#createbutton').addEventListener('click', () => {
     createWord(user.uid);
+  });
+
+  document.querySelector('#Filter').addEventListener('click', () => {
+    filter().then(showWords);
   });
 };
 
