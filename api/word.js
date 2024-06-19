@@ -15,18 +15,20 @@ const getWords = (uid) => new Promise((resolve, reject) => {
     .then((data) => resolve(Object.values(data)))
     .catch(reject);
 });
-const filter = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabulary.json?orderBy="language"&equalTo=true`, {
+const filter = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      const bylanguage = Object.values(data).filter((item) => item.language);
+      resolve(bylanguage);
+    })
     .catch(reject);
-});
-// // DELETE WORD
+});// // DELETE WORD
 const deleteWord = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary/${firebaseKey}.json`, {
     method: 'DELETE',
@@ -59,13 +61,12 @@ const updateWord = (payload) => new Promise((resolve, reject) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
   })
     .then((response) => response.json())
-    .then((data) => resolve(data))
+    .then(resolve)
     .catch(reject);
 });
-
 const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary/${firebaseKey}.json`, {
     method: 'GET',

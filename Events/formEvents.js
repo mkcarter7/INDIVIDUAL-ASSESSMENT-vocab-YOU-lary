@@ -29,6 +29,7 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#language').value,
+        firebaseKey,
       };
 
       updateWord(payload, firebaseKey).then(() => {

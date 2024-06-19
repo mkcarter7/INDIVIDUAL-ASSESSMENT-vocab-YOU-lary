@@ -25,7 +25,7 @@ const navigationEvents = (user) => {
   });
 
   document.querySelector('#Filter').addEventListener('click', () => {
-    filter().then(showWords);
+    filter().then(showWords(user.uid));
   });
 };
 

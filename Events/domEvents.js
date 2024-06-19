@@ -22,7 +22,6 @@ const domEvents = (user) => {
     if (e.target.id.includes('edit-word-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleWord(firebaseKey).then((wordObject) => addWord(user, wordObject));
-      getSingleWord(firebaseKey).then(addWord(user));
     }
   });
 };
