@@ -12,20 +12,30 @@ const getWords = (uid) => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
     .catch(reject);
 });
-const filter = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabulary.json?orderBy="language"&equalTo=true`, {
+const filter = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      const language = Object.values(data).filter((item) => item.language);
+      resolve(language);
+    })
     .catch(reject);
 });
+
 // // DELETE WORD
 const deleteWord = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary/${firebaseKey}.json`, {
