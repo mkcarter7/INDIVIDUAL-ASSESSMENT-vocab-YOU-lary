@@ -1,15 +1,16 @@
 import { showWords } from '../pages/words';
-import { createWord, getWords, filter } from '../api/word';
+import { getWords } from '../api/word';
 import { signOut } from '../utils/auth';
 import addWord from '../components/Form/form';
 
 // navigation events
 const navigationEvents = (user) => {
   // LOGOUT BUTTON
+  console.warn(user.uid);
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
-  // ALL WORDS
+  // ALL WORDS is Vocabulary in the navbar
   document.querySelector('#all-words').addEventListener('click', () => {
     getWords(user.uid).then(showWords);
   });
@@ -20,13 +21,13 @@ const navigationEvents = (user) => {
     addWord(user.uid);
   });
 
-  document.querySelector('#createbutton').addEventListener('click', () => {
-    createWord(user.uid);
-  });
-
-  document.querySelector('#Filter').addEventListener('click', () => {
-    filter().then(showWords);
-  });
+  // document.querySelector('#createbutton').addEventListener('click', () => {
+  //   createWord(user.uid);
+  // });
+// #TODO add back after creation of filter button
+  // document.querySelector('#filter').addEventListener('click', () => {
+  //   filter().then(showWords);
+  // });
 };
 
 export default navigationEvents;
