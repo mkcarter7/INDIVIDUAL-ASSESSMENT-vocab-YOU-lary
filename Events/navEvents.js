@@ -1,15 +1,16 @@
 import { showWords } from '../pages/words';
-import { createWord, getWords, filter } from '../api/word';
+import { getWords } from '../api/word';
 import { signOut } from '../utils/auth';
 import addWord from '../components/Form/form';
 
 // navigation events
 const navigationEvents = (user) => {
   // LOGOUT BUTTON
+  console.warn(user.uid);
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
-  // ALL WORDS
+  // ALL WORDS is Vocabulary in the navbar
   document.querySelector('#all-words').addEventListener('click', () => {
     getWords(user.uid).then(showWords);
   });

@@ -29,7 +29,7 @@ const showWords = (array) => {
     </div>
     `;
   });
-  renderToDOM('#cards', domString);
+  renderToDOM('#words', domString);
 };
 
 export { showWords, emptyWords };
