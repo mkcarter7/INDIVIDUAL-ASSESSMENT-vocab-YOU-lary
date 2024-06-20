@@ -5,16 +5,18 @@ const emptyWords = () => {
   const domString = '<h1>No Words</h1>';
   renderToDOM('#cards', domString);
 };
-
+// #TODO pass in user and compare user to array
 const showWords = (array) => {
   clearDom();
 
   const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-word-btn">Add Word</button>';
 
   renderToDOM('#add-button', btnString);
-
+  // pass userid and compare to item uid
+  // only return the item with matching user ids
   let domString = '';
   array.forEach((item) => {
+    // console.warn(item);
     domString += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">

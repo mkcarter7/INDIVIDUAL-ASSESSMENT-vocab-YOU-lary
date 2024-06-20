@@ -21,13 +21,13 @@ const navigationEvents = (user) => {
     addWord(user.uid);
   });
 
-  // document.querySelector('#createbutton').addEventListener('click', () => {
-  //   createWord(user.uid);
-  // });
-// #TODO add back after creation of filter button
-  // document.querySelector('#filter').addEventListener('click', () => {
-  //   filter().then(showWords);
-  // });
+  document.querySelector('#createbutton').addEventListener('click', () => {
+    createWord(user.uid);
+  });
+
+  document.querySelector('#Filter').addEventListener('click', () => {
+    filter().then(showWords(user.uid));
+  });
 };
 
 export default navigationEvents;
