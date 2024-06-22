@@ -5,18 +5,20 @@ const emptyWords = () => {
   const domString = '<h1>No Words</h1>';
   renderToDOM('#cards', domString);
 };
-// #TODO pass in user and compare user to array
 const showWords = (array) => {
   clearDom();
 
+  // ADD WORD BUTTON
   const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-word-btn">Add Word</button>';
+  // SORT BY ALPHABET BUTTON
+  const abutton = '<button type="button" class="btn btn-info">A - Z</button>';
+
+  // ALPHABET BUTTON ON DOM
+  renderToDOM('#alphabetbutton', abutton);
 
   renderToDOM('#add-button', btnString);
-  // pass userid and compare to item uid
-  // only return the item with matching user ids
   let domString = '';
   array.forEach((item) => {
-    // console.warn(item);
     domString += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">
